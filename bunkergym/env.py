@@ -1,7 +1,7 @@
 from math import floor
 import gym
 from gym import spaces
-from reward import RewardEvaluator
+from bunkergym.reward import RewardEvaluator
 from models.random_walk_models import VectorizedRandomWalkModel
 from models.linear_press_models import PressModel
 from typing import Union
@@ -302,7 +302,7 @@ if __name__ == "__main__":
     #     print(env.step(action=np.random.choice(11, p=[0.90, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01])))
 
     ### Alternative format with anonymous bunkers
-    env = SutcoEnv.from_json("./configs/list_constants_example.json")
+    env = SutcoEnv.from_json("configs/list_constants_example.json")
     env = FlattenObservation(env)
     for n in range(100):
         print(env.step(action=np.random.choice(7, p=[0.94, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01])))

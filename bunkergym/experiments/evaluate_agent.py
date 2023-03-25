@@ -10,10 +10,9 @@ import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 import torch
 from stable_baselines3 import PPO, DQN, A2C
-from sb3_contrib import TRPO
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common import results_plotter
-from env import SutcoEnv
+from bunkergym.env import SutcoEnv
 from gym.wrappers import FlattenObservation
 os.environ['CUDA_VISIBLE_DEVICES'] = ''
 torch.set_num_threads(1)
